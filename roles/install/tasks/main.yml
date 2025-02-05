@@ -2,7 +2,7 @@
 
 - name: Copy rpm file to server
   copy:
-     src: ./"{{ package.rpm }}"
+     src: ./"{{ package.rpm }}.value"
      dest: ~/package.rpm
 
 - name: install rpm
