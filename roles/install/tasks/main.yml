@@ -3,7 +3,7 @@
   debug:
     msg:
      path: "{{ item }}"
-  loop: "{{  }}"
+  loop: "{{ items }}"
 
 # - name: Install {{ service }} of version {{ version }}
 #   ansible.builtin.dnf:
