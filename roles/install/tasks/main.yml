@@ -1,14 +1,14 @@
 ---
 
-- name: Copy rpm file to server
-  get_url:
-     url: https://dev.mysql.com/get/mysql84-community-release-el8-1.noarch.rpm
-     dest: ./files/package.rpm
-     mode: '0440'
+# - name: Copy rpm file to server
+#   get_url:
+#      url: 
+#      dest: ./files/package.rpm
+#      mode: '0440'
 
 - name: install rpm
   yum:
-    name: ./files/package.rpm
+    name: https://dev.mysql.com/get/mysql84-community-release-el8-1.noarch.rpm
     state: present
 
 # - name: Install {{ service }} of version {{ version }}
