@@ -1,0 +1,12 @@
+plugin: amazon.aws.aws_ec2
+regions:
+  - us-east-1  # Replace with your region
+keyed_groups:
+  - prefix: tag
+    key: tags
+filters:
+  instance-state-name: running  # Filter instances with the tag 'Environment=development'
+  tag:Owner:
+      - 'tomerlevy'
+compose:
+  ansible_host: private_ip_address

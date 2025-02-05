@@ -1,0 +1,17 @@
+---
+- name: Gather information about EC2 instances
+  hosts: aws_ec2  # Replace with a dynamic group name from the inventory output
+  gather_facts: yes
+  vars:
+    ansible_ssh_private_key_file: ~/tomer_keys2.pem
+  tasks:
+#    - name: set ssh key
+#      ansible.builtin.set_fact:
+#        ansible_ssh_private_key: ~/.ssh/tomer_keys2.pem
+    - name: Print instance public IPs
+      debug:
+        msg: "Instance IP: {{ ansible_host }}"
+
+    - name: Print EC2 tags
+      debug:
+        msg: "{{ hostvars[inventory_hostname].tags }}"
