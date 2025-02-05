@@ -1,6 +1,7 @@
 ---
 - name: Gather information about EC2 instances
-  hosts: "{{ service }}"  # Replace with a dynamic group name from the inventory output
+  hosts: aws_ec2
+    # Replace with a dynamic group name from the inventory output
   become: true
   gather_facts: yes
   vars:
@@ -10,6 +11,8 @@
     - name: Print variable
       debug:
         msg: "{{ service }}<={{ version }}"
+    - name: change host
+      hosts: "{{ service }}"
     
   roles:
     - install 
