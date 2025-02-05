@@ -1,8 +1,8 @@
 ---
 - name: split date tag
   ansible.builtin.split:
-  date: "{{ {{ restart }} | split(' at ') }}"
-  time_of_day: "{{ {{ date[2] }} | split(':') }}"
+    date: "{{ {{ restart }} | split(' at ') }}"
+    time_of_day: "{{ {{ date[2] }} | split(':') }}"
   
 
 - name: Creates a cron file under /etc/cron.d
