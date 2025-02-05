@@ -1,2 +1,2 @@
-date: "{{ {{ restart }} | split(' at ') }}"
-time_of_day: "{{ {{ date[2] }} | split(':') }}"
+date: "{{ restart  | split(' at ') }}"
+time_of_day: "{{  date[2] | split(':') }}"
