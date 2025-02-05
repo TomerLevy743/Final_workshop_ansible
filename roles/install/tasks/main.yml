@@ -4,7 +4,7 @@
   yum:
      name: "{{ item }}"
      state: present
-     enablerepo: "base,{{ version_repo }}"
+     enablerepo: "base,{{service}}.{{ version }}-community"
      disablerepo: "*"
   loop: "{{ packages }}"
   become: yes
