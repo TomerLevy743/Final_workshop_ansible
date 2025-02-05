@@ -1,7 +1,4 @@
 ---
-- name: change hosts
-  hosts: "{{service}}"
-  
 - name: check 
   debug:
     msg:
