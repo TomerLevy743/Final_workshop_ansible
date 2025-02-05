@@ -1,12 +1,14 @@
 ---
-- name: Install {{ service }} of version {{ version }}
-  ansible.builtin.dnf:
-    name: "{{service}}={{version}}"
-    state: present
-
-- name: start service
-  ansible.builtin.service:
-    name: {{ service }}
-    enabled: yes
-    state: started
+# - name: Install {{ service }} of version {{ version }}
+#   ansible.builtin.dnf:
+#     name: "{{ service }}={{ version }}"
+#     state: present
+- name: Print instance public IPs
+  debug:
+    msg: "Instance IP: {{ ansible_host }}"
+# - name: start service
+#   ansible.builtin.service:
+#     name: "{{ service }}"
+#     enabled: yes
+#     state: started
 
