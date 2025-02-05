@@ -3,20 +3,15 @@ regions:
   - us-east-1  # Replace with your region
 allow_duplicated_hosts: false
 keyed_groups:
-   - key:Service:
-      - nginx
-      - mysql
+   - key: tags.Service
+     separator: ""
 filters:
   instance-state-name: running  # Filter instances with the tag 'Environment=development'
   tag:Owner:
       - 'tomerlevy'
   tag:Managed:
       - 'true'
-   
-    # Managed=true , Name=name of the server, 
-    # Service= name of service that should be installed
-    # Version=version of service , 
-    # Restart= day and hour to be restarted
+    
 compose:
   ansible_host: private_ip_address
   host_name: tags.Name
