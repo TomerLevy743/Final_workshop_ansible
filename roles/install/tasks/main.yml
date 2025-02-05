@@ -2,7 +2,7 @@
 - name: check 
   debug:
     msg:
-     path: "{{ item.value }}"
+     path: "{{ item }}"
   loop: "{{ packages }}"
 
 # - name: Install {{ service }} of version {{ version }}
