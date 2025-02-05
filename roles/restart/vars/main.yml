@@ -1,9 +1,2 @@
-# ---
-# mysql:
-#   - mysql-server
-#   - mysql-client
-#   - python3-mysqldb
-#   - libmysqlclient-dev
-
-  #nginx:
-    #-
+date: "{{ {{ restart }} | split(' at ') }}"
+time_of_day: "{{ {{ date[2] }} | split(':') }}"
