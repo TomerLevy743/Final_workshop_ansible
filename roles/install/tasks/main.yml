@@ -1,5 +1,4 @@
 ---
-- name: install 
 - name: Install {{ service }} of version {{ version }}
   yum:
      name: "{{ item }}"
