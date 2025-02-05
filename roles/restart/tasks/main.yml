@@ -1,4 +1,7 @@
 ---
+- vars:
+  - date: "{{ restart  | split(' at ') }}"
+  - time_of_day: "{{  date[2] | split(':') }}"
 - name: Creates a cron file under /etc/cron.d
   ansible.builtin.cron:
     name: ec2 restart
