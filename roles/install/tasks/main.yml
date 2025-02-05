@@ -3,7 +3,7 @@
 - name: Copy rpm file to server
   copy:
      src: /home/ec2-user/Final_workshop_ansible/{{ item }}
-     dest: /home/ec2-user/package.rpm
+     dest: /home/ec2-user/rpm_package.rpm
   loop: "{{ rpm }}"
 - name: install rpm
   yum:
