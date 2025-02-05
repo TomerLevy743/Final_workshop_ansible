@@ -1,9 +1,11 @@
 ---
+{% if service  == 'mysql'%}
 - name: check 
   debug:
     msg:
      path: "{{ item }}"
-  loop: "{{ packages }}"
+  loop: "{{ mysql }}"
+{% endif %}
 
 # - name: Install {{ service }} of version {{ version }}
 #   ansible.builtin.dnf:
