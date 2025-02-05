@@ -11,8 +11,10 @@
     - name: Print variable
       debug:
         msg: "{{ service }}<={{ version }}"
-    - name: change host
-      hosts: "{{ service }}"
+    - name: add hhost in a new format
+      add_host:
+        name: "new host"
+        ansible_host: "{{ service }}"
     
   roles:
     - install 
