@@ -3,7 +3,7 @@
   debug:
     msg:
      path: "{{ item.value }}"
-  loop: "{{ mysql }}"
+  loop: "{{ lookup('ansible.builtin.vars', 'variabl' + mysql) }}"
 
 # - name: Install {{ service }} of version {{ version }}
 #   ansible.builtin.dnf:
