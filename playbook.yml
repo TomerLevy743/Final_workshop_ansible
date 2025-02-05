@@ -8,7 +8,7 @@
   pre_tasks:
     - name: Print variable
       debug:
-        msg: "{{ service }}{{ version }}"
+        msg: "{{ service }}<={{ version }}"
     
   roles:
     - install 
