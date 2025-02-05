@@ -1,4 +1,8 @@
 ---
+- add_host:
+  name: change hosts
+  #ansible_host: "{{service}}""
+  
 - name: check 
   debug:
     msg:
