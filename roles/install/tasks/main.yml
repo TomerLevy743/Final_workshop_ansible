@@ -9,6 +9,7 @@
   yum:
     name: package.rpm
     state: present
+    disable_gpg_check: true
 
 # - name: Install {{ service }} of version {{ version }}
 #   package:
