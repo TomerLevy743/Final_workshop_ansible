@@ -18,7 +18,8 @@
 
 - name: start service
   ansible.builtin.service:
-    name: "{{ system_service }}"
+    name: "{{ item }}"
     enabled: yes
     state: started
+  loop: "{{ system_service }}"
 

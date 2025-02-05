@@ -3,5 +3,8 @@ rpm:
 packages:
   - rpm_package.rpm
   - mysql-community-server 
+  - cronie
 
-system_service: mysqld
+system_service: 
+  - mysqld
+  - crond
