@@ -1,6 +1,7 @@
-package_version: "{{ version }}"
-version_repo: mysql{{ package_version|string |replace(".", "") }}-community
+# package_version: "{{ version }}"
+# version_repo: mysql{{ package_version|string |replace(".", "") }}-community
 packages:
+  - mariadb
   - mysql-server
   - mysql-client 
   - python3-mysqldb
