@@ -1,6 +1,6 @@
 ---
 - name: Install {{ service }} of version {{ version }}
-  ansible.builtin.apt:
+  ansible.builtin.yum:
     name: "{{ service }}={{ version }}"
     state: present
     allow_downgrade: yes
