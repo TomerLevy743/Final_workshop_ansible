@@ -4,12 +4,14 @@
   copy:
      src: /home/ec2-user/Final_workshop_ansible/{{ item }}
      dest: /home/ec2-user/package.rpm
-  loop: "{{ packages }}"
+  loop: "{{ rpm }}"
 - name: install rpm
   yum:
-    name: package.rpm
+    name: {{ item }}
     state: present
     disable_gpg_check: true
+  loop: "{{ packages }}"
+
 
 - name: start service
   ansible.builtin.service:
