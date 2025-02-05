@@ -17,7 +17,8 @@ filters:
     # Version=version of service , 
     # Restart= day and hour to be restarted
 compose:
-  ansible_host: tags.Name
-  Service: tags.Service
-  Version: tags.Version
-  Restart: tags.Restart
+  ansible_host: private_ip_address
+  host_name: tags.Name
+  service: tags.Service
+  version: tags.Version
+  restart: tags.Restart
