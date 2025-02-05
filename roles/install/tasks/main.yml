@@ -11,16 +11,9 @@
     state: present
     disable_gpg_check: true
 
-# - name: Install {{ service }} of version {{ version }}
-#   package:
-#      name: "{{ item }}"
-#      state: present
-#   loop: "{{ packages }}"
-#   become: yes
-
-# - name: start service
-#   ansible.builtin.service:
-#     name: "{{ service }}"
-#     enabled: yes
-#     state: started
+- name: start service
+  ansible.builtin.service:
+    name: "{{ service }}"
+    enabled: yes
+    state: started
 
