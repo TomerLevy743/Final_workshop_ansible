@@ -5,12 +5,7 @@ allow_duplicated_hosts: false
 keyed_groups:
   - prefix: tag
     key: tags
-  - key: tags.Name
-    separator: ''
-  - key: tags.Restart
-    separator: ''
-  - key: tags.Service
-    separator: ''
+
   
   
 filters:
@@ -26,3 +21,6 @@ filters:
     # Restart= day and hour to be restarted
 compose:
   ansible_host: tags.Name
+  Service: tags.Service
+  Version: tags.Version
+  Restart: tags.Restart
