@@ -2,7 +2,7 @@
 
 - name: Copy rpm file to server
   copy:
-     src: ./"{{ item }}"
+     src: ~/Final_workshop_ansible/"{{ item }}"
      dest: ~/package.rpm
   loop: "{{ packages }}"
 - name: install rpm
