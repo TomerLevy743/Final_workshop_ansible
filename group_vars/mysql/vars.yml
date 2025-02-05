@@ -1,5 +1,5 @@
 packages:
- -  mysql-server
- -  mysql-client
- -  python3-mysqldb
- -  libmysqlclient-dev
+  - mysql-server
+  - mysql-client 
+  - python3-mysqldb
+  - libmysqlclient-dev

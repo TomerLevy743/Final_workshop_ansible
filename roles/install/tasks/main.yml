@@ -1,10 +1,11 @@
 ---
 
 - name: Install {{ service }} of version {{ version }}
-  ansible.builtin.dnf:
+  package:
      name: "{{ item }}"
      state: present
   loop: "{{ packages }}"
+  become: yes
 
 # - name: start service
 #   ansible.builtin.service:
