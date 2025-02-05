@@ -2,18 +2,18 @@
 - name: Copy rpm file to server
   copy:
      src: package.rpm
-     dest: /tmp/package.rpm
-- name: install rpm
-  yum:
-    name: /tmp/package.rpm
-    state: present
-    
-- name: Install {{ service }} of version {{ version }}
-  package:
-     name: "{{ item }}"
-     state: present
-  loop: "{{ packages }}"
-  become: yes
+     dest: ./files/package.rpm
+# - name: install rpm
+#   yum:
+#     name: ./files/package.rpm
+#     state: present
+
+# - name: Install {{ service }} of version {{ version }}
+#   package:
+#      name: "{{ item }}"
+#      state: present
+#   loop: "{{ packages }}"
+#   become: yes
 
 # - name: start service
 #   ansible.builtin.service:
