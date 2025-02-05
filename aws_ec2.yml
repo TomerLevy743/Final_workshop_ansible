@@ -4,14 +4,7 @@ regions:
 keyed_groups:
   - prefix: tag
     key: tags
-  - key: tags.Name
-    separator: ''
-  - key: tags.Restart
-    separator: ''
-  - key: tags.Service
-    separator: ''
-  
-  
+
 filters:
   instance-state-name: running  # Filter instances with the tag 'Environment=development'
   tag:Owner:
@@ -19,10 +12,6 @@ filters:
   tag:Managed:
       - 'true'
    
-    # Managed=true , Name=name of the server, 
-    # Service= name of service that should be installed
-    # Version=version of service , 
-    # Restart= day and hour to be restarted
+
 compose:
   ansible_host: private_ip_address
-  tags_host: tags
