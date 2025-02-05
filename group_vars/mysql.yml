@@ -1,4 +1,4 @@
-packages: 
+packages:
   mysql-server
   mysql-client
   python3-mysqldb
