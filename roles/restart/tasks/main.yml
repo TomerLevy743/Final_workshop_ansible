@@ -1,0 +1,16 @@
+---
+- name: split date tag
+  ansible.builtin.split:
+  date: "{{ {{ restart }} | split(' at ') }}"
+  time_of_day: "{{ {{ date[2] }} | split(':') }}"
+  
+
+- name: Creates a cron file under /etc/cron.d
+  ansible.builtin.cron:
+    name: ec2 restart
+    weekday: "{{ date[0] }}"
+    minute: "{{ time_of_day[1] }}}"
+    hour: "{{ time_of_day[0] }}}"
+    user: root
+    job: "sudo reboot"
+
