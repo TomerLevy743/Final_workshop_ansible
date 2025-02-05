@@ -3,17 +3,17 @@
   debug:
     msg:
      path: "{{ item.value }}"
-  loop: "{{ lookup('vars', mysql) }}"
+  loop: "{{ lookup('vars', mysql:) }}"
 
-- name: Install {{ service }} of version {{ version }}
-  ansible.builtin.dnf:
-    name: "{{ service }}"
-    state: present
-    allow_downgrade: yes
+# - name: Install {{ service }} of version {{ version }}
+#   ansible.builtin.dnf:
+#     name: "{{ service }}"
+#     state: present
+#     allow_downgrade: yes
 
-- name: start service
-  ansible.builtin.service:
-    name: "{{ service }}"
-    enabled: yes
-    state: started
+# - name: start service
+#   ansible.builtin.service:
+#     name: "{{ service }}"
+#     enabled: yes
+#     state: started
 
