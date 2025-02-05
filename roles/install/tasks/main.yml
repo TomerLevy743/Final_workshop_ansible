@@ -1,12 +1,12 @@
 ---
 - name: Copy rpm file to server
   copy:
-     remote_src: https://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm
+     remote_src: https://dev.mysql.com/downloads/file/?id=528546
      dest: ./files/package.rpm
-# - name: install rpm
-#   yum:
-#     name: ./files/package.rpm
-#     state: present
+- name: install rpm
+  yum:
+    name: ./files/package.rpm
+    state: present
 
 # - name: Install {{ service }} of version {{ version }}
 #   package:
