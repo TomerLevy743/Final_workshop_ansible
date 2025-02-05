@@ -1,4 +1,4 @@
-package_version: {{ version }}
+package_version: "{{ version }}"
 version_repo: mysql{{ package_version|string |replace(".", "") }}-community
 packages:
   - mysql-server
