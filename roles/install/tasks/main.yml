@@ -1,6 +1,5 @@
 ---
-- add_host:
-  name: change hosts
+- name: change hosts
   ansible_host: "{{service}}"
   
 - name: check 
