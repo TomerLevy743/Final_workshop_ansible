@@ -2,9 +2,10 @@ plugin: amazon.aws.aws_ec2
 regions:
   - us-east-1  # Replace with your region
 allow_duplicated_hosts: false
-# keyed_groups:
-#   - prefix: tag
-#     key: tags
+keyed_groups:
+   - key:Service:
+      - nginx
+      - mysql
 filters:
   instance-state-name: running  # Filter instances with the tag 'Environment=development'
   tag:Owner:

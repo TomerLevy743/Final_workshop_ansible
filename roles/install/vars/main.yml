@@ -1,0 +1,10 @@
+---
+vars:
+  mysql:
+    - mysql-server
+    - mysql-client
+    - python3-mysqldb
+    - libmysqlclient-dev
+
+  #nginx:
+    #-
