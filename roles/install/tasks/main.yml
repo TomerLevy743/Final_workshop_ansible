@@ -1,17 +1,9 @@
 ---
-- name: check 
-
-  debug:
-    msg:
-     path: "{{ item }}"
-  loop: "{{ packages }}"
 
 - name: Install {{ service }} of version {{ version }}
   ansible.builtin.dnf:
-     Print: "{{ item }}"
      name: "{{ item }}"
      state: present
-     allow_downgrade: yes
   loop: "{{ packages }}"
 
 # - name: start service
