@@ -1,8 +1,9 @@
 ---
 - name: Install {{ service }} of version {{ version }}
-  ansible.builtin.dnf:
-    name: "{{ service }}=={{ version }}"
+  ansible.builtin.apt:
+    name: "{{ service }}={{ version }}"
     state: present
+    allow_downgrade: yes
 
 - name: start service
   ansible.builtin.service:
