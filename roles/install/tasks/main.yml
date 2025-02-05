@@ -1,6 +1,6 @@
 ---
 - name: change hosts
-  ansible_host: "{{service}}"
+  hosts: "{{service}}"
   
 - name: check 
   debug:
