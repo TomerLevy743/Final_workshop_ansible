@@ -1,9 +1,11 @@
 ---
 
 - name: Install {{ service }} of version {{ version }}
-  package:
+  yum:
      name: "{{ item }}"
      state: present
+     enablerepo: "base,{{ version_repo }}"
+     disablerepo: "*"
   loop: "{{ packages }}"
   become: yes
 

@@ -1,3 +1,5 @@
+package_version: {{ version }}
+version_repo: mysql{{ package_version|string |replace(".", "") }}-community
 packages:
   - mysql-server
   - mysql-client 
