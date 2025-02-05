@@ -1,5 +1,6 @@
 ---
-- debug:
+- name: check 
+  debug:
         msg:
           path: "{{ item.value }}"
   loop: "{{ lookup('vars', mysql) }}"
