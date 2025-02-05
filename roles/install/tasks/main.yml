@@ -2,9 +2,9 @@
 
 - name: Copy rpm file to server
   copy:
-     src: ./"{{ package.rpm }}.value"
+     src: ./"{{ item }}"
      dest: ~/package.rpm
-
+  loop: "{{ packages }}"
 - name: install rpm
   yum:
     name: package.rpm
