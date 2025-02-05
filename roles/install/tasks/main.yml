@@ -7,7 +7,7 @@
   loop: "{{ rpm }}"
 - name: install rpm
   yum:
-    name: {{ item }}
+    name: "{{ item }}"
     state: present
     disable_gpg_check: true
   loop: "{{ packages }}"
