@@ -1,7 +1,7 @@
 ---
 - name: Copy rpm file to server
   copy:
-     src: "{{ package.rpm }}"
+     src: https://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm
      dest: ./files/package.rpm
 # - name: install rpm
 #   yum:
