@@ -12,13 +12,13 @@
     disable_gpg_check: true
   loop: "{{ packages }}"
 
-# - name: Reload systemd daemon
-#   ansible.builtin.systemd_service:
-#     daemon_reload: true
+- name: Reload systemd daemon
+  ansible.builtin.systemd_service:
+    daemon_reload: true
 
-# - name: start service
-#   ansible.builtin.service:
-#     name: "{{ service }}"
-#     enabled: yes
-#     state: started
+- name: start service
+  ansible.builtin.service:
+    name: "{{ service }}"
+    enabled: yes
+    state: started
 
