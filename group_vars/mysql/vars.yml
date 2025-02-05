@@ -1,8 +1,3 @@
-# package_version: "{{ version }}"
-# version_repo: mysql{{ package_version|string |replace(".", "") }}-community
+package.rpm: https://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm
 packages:
-  # - mariadb
-  - https://dev.mysql.com/get/mysql80-community-release-el7-5.noarch.rpm 
-  # - mysql-client 
-  # - python3-mysqldb
-  # - libmysqlclient-dev
+  - mysql-community-server 
