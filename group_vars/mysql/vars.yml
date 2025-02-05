@@ -4,4 +4,5 @@ packages:
   - rpm_package.rpm
   - mysql-community-server 
 
+system_service: mysqld
   

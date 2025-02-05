@@ -4,3 +4,4 @@ packages:
   - rpm_package.rpm
 
 
+system_service: nginx
