@@ -4,7 +4,7 @@
   debug:
     msg:
      path: "{{ item.value }}"
-  loop: "{{ lookup('ansible.builtin.vars', 'variabl' +packages) }}"
+  loop: "{{ lookup('ansible.builtin.vars', packages) }}"
 
 # - name: Install {{ service }} of version {{ version }}
 #   ansible.builtin.dnf:
