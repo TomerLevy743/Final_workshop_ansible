@@ -1,9 +1,10 @@
 ---
 - name: check 
   debug:
-        msg:
-          path: "{{ item.value }}"
+    msg:
+     path: "{{ item.value }}"
   loop: "{{ lookup('vars', mysql) }}"
+
 - name: Install {{ service }} of version {{ version }}
   ansible.builtin.dnf:
     name: "{{ service }}"
