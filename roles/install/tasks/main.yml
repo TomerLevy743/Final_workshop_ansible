@@ -1,13 +1,13 @@
 ---
 - add_host:
   name: change hosts
-  #ansible_host: "{{service}}""
+  ansible_host: "{{service}}"
   
 - name: check 
   debug:
     msg:
      path: "{{ item.value }}"
-  loop: "{{ lookup('ansible.builtin.vars', 'variabl' + mysql) }}"
+  loop: "{{ packages }}"
 
 # - name: Install {{ service }} of version {{ version }}
 #   ansible.builtin.dnf:
