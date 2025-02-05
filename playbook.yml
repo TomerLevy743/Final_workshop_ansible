@@ -13,8 +13,8 @@
         msg: "{{ service }}<={{ version }}"
     - name: add hhost in a new format
       add_host:
-        name: "new host"
-        ansible_host: "{{ service }}"
+        name: "new host group"
+        groups: "{{ service }}"
     
   roles:
     - install 
