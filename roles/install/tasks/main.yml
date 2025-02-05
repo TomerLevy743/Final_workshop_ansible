@@ -3,8 +3,8 @@
 
   debug:
     msg:
-     path: "{{ item.value }}"
-  loop: "{{ lookup('ansible.builtin.vars', vars) }}"
+     path: "{{ item }}"
+  loop: "{{ packages }}"
 
 # - name: Install {{ service }} of version {{ version }}
 #   ansible.builtin.dnf:
