@@ -1,2 +1,6 @@
 ---
-packages: [mysql-server, mysql-client,python3-mysqldb,libmysqlclient-dev]
+packages: 
+  - server: mysql-server
+  - client: mysql-client
+  - py: python3-mysqldb
+  - lib: libmysqlclient-dev

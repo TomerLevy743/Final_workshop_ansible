@@ -2,8 +2,8 @@
 - name: check 
   debug:
     msg:
-     path: "{{ item }}"
-  loop: "{{ items }}"
+     path: "{{ item.value }}"
+  loop: "{{ packages }}"
 
 # - name: Install {{ service }} of version {{ version }}
 #   ansible.builtin.dnf:
